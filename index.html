@@ -6,20 +6,46 @@
     <body>
         <input type="file" onchange="ShowText()" /><br />
         <p class="content"></p>
-        <script type="text/javascript">
-            function ShowText() {
-                const content = document.querySelector(".content");
-                const [file] = document.querySelector("input[type=file]").files;
-                const read = new FileReader();
+        <script type="module" src="server-test.js">
+            // function ShowText() {
+            //     const content = document.querySelector(".content");
+            //     const [file] = document.querySelector("input[type=file]").files;
+            //     const read = new FileReader();
 
-                read.addEventListener("load", () => {
-                    content.innerText = read.result;
-                }, false);
+            //     read.addEventListener("load", () => {
+            //         content.innerText = read.result;
+            //     }, false);
 
-                if (file) {
-                    read.readAsText(file);
-                }
-            }
+            //     if (file) {
+            //         read.readAsText(file);
+            //         const http = require('http');
+            //         RequestHTTP();
+            //     }
+            // }
+
+            // function RequestHTTP() {
+            //     const options = {
+            //         protocol: 'http:',
+            //         hostname: 'localhost',
+            //         port: 8000,
+            //         path: '/',
+            //         method: 'GET',
+            //     };
+
+            //     const req = http.request(options, (res) => {
+            //         let data = '';
+
+            //         res.on('data', (chunk) => {
+            //             data += chunk;
+            //         });
+
+            //         res.on('end', () => {
+            //             console.log(data);
+            //         });
+            //     });
+
+            //     req.end();
+            // }
         </script>
     </body>
 </html>
